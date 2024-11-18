@@ -1,0 +1,289 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #002147, #003d72, #0057a6, #0071d0, #339aff);
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+}
+
+.menu-icon {
+    background-color: #339aff;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.menu-icon::before {
+    content: "☰"; /* Ícone do menu */
+    font-size: 24px;
+    color: white;
+}
+
+.menu-text {
+    font-size: 18px;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo {
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu-content {
+    display: none;
+    background-color: #003d72;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-content li {
+    margin: 10px 0;
+}
+
+.menu-content a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.carousel-text h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.carousel-text p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.cta-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+.carousel-indicators {
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-indicators .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .dot.active,
+.carousel-indicators .dot:hover {
+    background-color: #717171;
+}
+
+/* Posts */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-paragraph {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulário */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px; /* Limita a largura do formulário */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espaço antes do footer */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Garante que o footer fique no final da página */
+}
